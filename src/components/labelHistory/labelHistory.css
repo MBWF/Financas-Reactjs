@@ -1,0 +1,42 @@
+#engloba {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+#main {
+  display: flex;
+  background-color: white;
+  width: 65em;
+  height: 3em;
+  border-radius: 8px;
+  justify-content: left;
+  align-items: center;
+}
+
+.name-event {
+    font-size: 14pt;
+    width: 40%;
+    text-align: left;
+}
+
+.name-event p {
+    margin-left: 15px;
+    text-align: left;
+}
+
+.details {
+    width: 40%;
+}
+
+#main ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+#main li {
+  display: inline;
+  padding: 0px 65px;
+  font-size: 14pt;
+}

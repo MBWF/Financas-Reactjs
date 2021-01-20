@@ -1,0 +1,30 @@
+#movimentacoes {
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+    margin-bottom: 100px;
+}
+
+.registros {
+    border-radius: 5px;
+    margin-left: 30px;
+    background-color: white;
+    width: 20em;
+    height: 8em;
+}
+
+.registros p {
+    font-size: 14pt;
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.registros h1 {
+    margin: 25px 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.registros:last-child {
+    background-color: #FF872C;
+    color: white;
+}
