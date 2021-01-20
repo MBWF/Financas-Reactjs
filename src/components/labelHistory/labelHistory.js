@@ -2,20 +2,20 @@ import React from 'react'
 
 import './labelHistory.css'
 
-export default function Label() {
+export default function Label({title, money, description, dateMoney}) {
     return (
         <>
         <div id='engloba'>
             <div id='main'>
                 <div className='name-event'>
-                    <p>Desenvolvimento</p>
+                    <p>{title}</p>
                 </div>
 
                 <div className='details'>
                     <ul>
-                        <li>R$12.000,00</li>
-                        <li>Venda</li>
-                        <li>13/14/2020</li>
+                        <li>R${money}</li>
+                        <li>{description}</li>
+                        <li>{dateMoney}</li>
                     </ul>
                 </div>
             </div>
