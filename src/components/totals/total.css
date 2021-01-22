@@ -1,10 +1,3 @@
-#movimentacoes {
-    display: flex;
-    justify-content: center;
-    margin-top: -100px;
-    margin-bottom: 100px;
-}
-
 .registros {
     border-radius: 5px;
     margin-left: 30px;
@@ -15,16 +8,17 @@
 
 .registros p {
     font-size: 14pt;
-    margin: 20px;
+    padding: 15px 20px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .registros h1 {
-    margin: 25px 20px;
+    margin-top: 10px;
+    margin-left: 20px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.registros:last-child {
+/* .registros:last-child {
     background-color: #FF872C;
     color: white;
-}
+} */

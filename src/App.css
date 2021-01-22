@@ -20,6 +20,15 @@ body {
     color: white;
 }
 
+.total-saldo {
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    margin-bottom: 100px;
+}
+
+
+
 #cadastrar {
     margin-top: 20px;
     text-align: center;

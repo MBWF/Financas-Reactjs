@@ -6,14 +6,16 @@ import Label from './components/labelHistory/labelHistory'
 
 function App() {
 
-    
+    const [transacoes, setTransacoes] = useState([])
+ 
+    const [entrada, setEntrada] = useState(0)
 
-    const [transacoes, setTransacoes] = useState([{
-        titulo: 'Salário',
-        dinheiro: 1520.00,
-        descricao: 'Venda',
-        data: Date.now()
-    }])
+    // var i
+    // for(i = 0; i < 2 ; i++) {
+    //     console.log(i)
+    //     setEntrada(entrada + transacoes[i].dinheiro)
+        
+    // }
 
     function sendInfo() {
         const registros = {
@@ -22,10 +24,16 @@ function App() {
             descricao: document.getElementById('descricao').value,
             data: document.getElementById('data').value
         }
+
         
         
         console.log(registros)
         setTransacoes([...transacoes, registros])
+
+        document.getElementById('titulo').value=''
+        document.getElementById('dinheiro').value=''
+        document.getElementById('descricao').value='',
+        document.getElementById('data').value=''
     }
 
     return (
@@ -33,10 +41,12 @@ function App() {
             <div className='header-background'>
                 <h1>Minhas Finanças</h1>
             </div>
-
-            <Totals/>
-
-            {transacoes.map(label => <Label key={label} title={transacoes.titulo} money={transacoes.dinheiro} description={transacoes.descricao} dateMoney={transacoes.data} />)}
+            <div className='total-saldo'>
+                <Totals title='entrada' valor={entrada}/>
+                <Totals title='Saída' valor='800'/>
+                <Totals title='Saldo' valor='400' className='saldo'/>
+            </div>
+            {transacoes.map(label => <Label key={label} title={label.titulo} money={label.dinheiro} description={label.descricao} dateMoney={label.data} />)}
 
             
             <div id='cadastrar'>
