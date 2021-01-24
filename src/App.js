@@ -51,19 +51,9 @@ function App() {
             data
         }
         
-        console.log(registros)
         const aux = [...transacoes, registros]
         setTransacoes(aux)
     }
-
-
-    const onChangeDinheiro = e => {
-        if(e.target.value) {
-            setDinheiro(parseFloat(e.target.value))
-        }
-    }
-
-
 
     return (
         <>
@@ -75,8 +65,9 @@ function App() {
                 <Totals title='Saída' valor={saida}/>
                 <Totals title='Saldo' valor={saldo} className='saldo'/>
             </div>
-            {transacoes.map(label => <Label key={`${Math.random()}`} title={label.titulo} money={label.dinheiro} description={label.descricao} dateMoney={label.data} />)}
-
+            <div id='transacoes-map'>
+                {transacoes.map(label => <Label key={`${Math.random()}`} title={label.titulo} money={label.dinheiro} description={label.descricao} dateMoney={label.data} />)}
+            </div>
             
             <div id='cadastrar'>
                 <input 
@@ -96,12 +87,15 @@ function App() {
                         }
                     }}
                 />
-                <input
-                    placeholder='Descrição'
+                <select
                     name='descricao'
                     value={descricao}
-                    onChange={e => setDescricao(e.target.value)}
-                />
+                    onChange={e => setDescricao(e.target.value)}>
+                    <option></option>
+                    <option value='entrada' >Entrada</option>
+                    <option value='saida'>Saida</option>
+                </select>
+                
                 <input
                     placeholder='Data'
                     name='data'
